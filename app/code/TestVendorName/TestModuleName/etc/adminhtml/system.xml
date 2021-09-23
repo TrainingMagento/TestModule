@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="test_tab_id" translate="label" sortOrder="1">
+            <label>Test Tab Title</label>
+        </tab>
+        <section id="test_section_id" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Test Section Label</label>
+            <tab>test_tab_id</tab>
+            <resource>TestVendorName_TestModuleName::test_resource_id</resource>
+            <group id="test_group_id" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Test Group Label</label>
+                <field id="test_field_id1" translate="label comment" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Test Field Label1</label>
+                    <comment>Use {{name}} as Product Name placeholder</comment>
+                </field>
+                <field id="test_field_id2" translate="label comment" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Test Field Label2</label>
+                    <comment>Test Comment</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <test_section_id>
+            <test_group_id>
+                <test_field_id1>Test Default Value</test_field_id1>
+            </test_group_id>
+        </test_section_id>
+    </default>
+</config>

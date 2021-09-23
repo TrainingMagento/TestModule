@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:App/etc/routes.xsd">
+    <router id="standard">
+        <route id="test_route_id" frontName="test_front_name">
+            <module name="VendorName_ModuleName" before="Magento_Catalog"/>
+        </route>
+    </router>
+</config>

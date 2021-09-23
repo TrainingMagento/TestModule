@@ -1,0 +1,25 @@
+<?php
+/** @var TestNamespace\TestModuleName\ViewModel\TestViewModel $viewModel */
+/** @var TestNamespace\TestModuleName\Block\TestBlock $block */
+$viewModel = $block->getViewModel();
+$blogCollection = $viewModel->getBlogRepositoryCollection();
+echo date('H:i:s');
+echo '<br />';
+echo $block->getCacheKey();
+?>
+<br />
+<br />
+
+<?php foreach ($blogCollection as $blogPost): ?>
+<?= $block->escapeHtml($blogPost->getData('title')); ?><br/>
+<?= $block->escapeHtml($blogPost->getData('content')); ?><br/>
+<a href="<?= $block->getUrl('*/*/delete', ['id' => $blogPost->getId()]); ?>" >Delete</a><br/><br/>
+<?php endforeach; ?>
+
+<form action="<?= $block->getUrl('*/*/save'); ?>">
+    <label for="title">Title:</label><br/>
+    <input type="text" name="title" id="title"><br/>
+    <label for="content">Content:</label><br/>
+    <input type="text" name="content" id="content"><br/>
+    <input type="submit" value="Submit">
+</form>

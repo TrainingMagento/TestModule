@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\App\RouterList">
+        <arguments>
+            <argument name="routerList" xsi:type="array">
+                <item name="%name%" xsi:type="array">
+                    <item name="class" xsi:type="string">%classpath%</item>
+                    <item name="disable" xsi:type="boolean">false</item>
+                    <item name="sortOrder" xsi:type="string">%sortorder%</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+    <preference for="TestNamespace\TestModuleName\Api\Data\BlogInterface"
+                type="TestNamespace\TestModuleName\Model\Blog"/>
+    <preference for="TestNamespace\TestModuleName\Api\BlogRepositoryInterface"
+                type="TestNamespace\TestModuleName\Model\BlogRepository"/>
+    <preference for="TestNamespace\TestModuleName\Api\Data\BlogSearchResultInterface"
+                type="Magento\Framework\Api\SearchResults"/>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="blog_admin_listing_data_source" xsi:type="string">TestNamespace\TestModuleName\Model\ResourceModel\Blog\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="TestNamespace\TestModuleName\Model\ResourceModel\Blog\Grid\Collection"
+    type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">test_table</argument>
+            <argument name="resourceModel" xsi:type="string">TestNamespace\TestModuleName\Model\ResourceModel\Blog</argument>
+        </arguments>
+    </virtualType>
+</config>

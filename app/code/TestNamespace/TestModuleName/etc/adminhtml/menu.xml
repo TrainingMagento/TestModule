@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="TestNamespace_TestModuleName::blog_admin_main" title="Blog admin" translate="title" module="TestNamespace_TestModuleName" sortOrder="51" resource="TestNamespace_TestModuleName::blog_admin_main"/>
+        <add id="TestNamespace_TestModuleName::blog_admin_grid" title="Manage Posts" translate="title" module="TestNamespace_TestModuleName" sortOrder="51" resource="TestNamespace_TestModuleName::blog_admin_grid" parent="TestNamespace_TestModuleName::blog_admin_main" action="blog_admin/blog/index"/>
+    </menu>
+</config>

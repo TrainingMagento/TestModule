@@ -1,0 +1,17 @@
+<div data-bind="scope:'section'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+</div>
+<script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app":{
+                "components":{
+                    "section":{
+                        "component": "TestNamespace_TestModuleName/js/section",
+                        "template": "TestNamespace_TestModuleName/section"
+                    }
+                }
+            }
+        }
+    }
+</script>

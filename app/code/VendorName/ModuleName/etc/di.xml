@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="VendorName\ModuleName\SomeFolderName\SomeClassInterface" type="VendorName\ModuleName\SomeFolderName\SomeClassName" />
+    <type name="VendorName\ModuleName\SomeFolderName\SomeClassName">
+        <plugin name="some_unique_id" type="VendorName\ModuleName\Plugin\Test" sortOrder="1" disabled="false" />
+    </type>
+</config>
